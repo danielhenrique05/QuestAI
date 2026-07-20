@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dungeon"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- ===== CABEÇALHO ===== -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="🐉"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="SUA QUEST"
+            android:textColor="@color/flame_gold"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:fontFamily="serif" />
+
+        <!-- ===== ÁREA DE CARREGAMENTO ===== -->
+        <LinearLayout
+            android:id="@+id/grupoCarregando"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="40dp"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:indeterminateTint="@color/flame_gold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="consultando os oráculos arcanos..."
+                android:textColor="@color/parchment_edge"
+                android:textSize="14sp"
+                android:fontFamily="serif"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <!-- ===== CARD DE RESULTADO (PERGAMINHO) ===== -->
+        <LinearLayout
+            android:id="@+id/grupoResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_scroll"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvQuest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/ink_dark"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:fontFamily="serif" />
+        </LinearLayout>
+
+        <!-- ===== MENSAGEM DE ERRO ===== -->
+        <LinearLayout
+            android:id="@+id/grupoErro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/card_scroll"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💀"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tvMensagemErro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Os oráculos falharam em responder. Verifique sua conexão e tente novamente."
+                android:textColor="@color/error_red"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:fontFamily="serif" />
+        </LinearLayout>
+
+        <!-- ===== BOTÕES DE AÇÃO ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="18dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnCopiar"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/button_arcane"
+                android:text="📋 Copiar"
+                android:textColor="@color/parchment"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="serif" />
+
+            <Button
+                android:id="@+id/btnNovaQuest"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/button_ember"
+                android:text="⚔ Nova Quest"
+                android:textColor="@color/parchment"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="serif" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

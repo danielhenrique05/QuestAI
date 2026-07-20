@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fundo escuro de masmorra -->
+    <color name="dungeon_black">#1A1410</color>
+    <color name="dungeon_dark">#2F2417</color>
+
+    <!-- Pergaminho -->
+    <color name="parchment">#F1E2BE</color>
+    <color name="parchment_dark">#E3CE9E</color>
+    <color name="parchment_edge">#C9A86B</color>
+
+    <!-- Fogo / Tocha -->
+    <color name="ember_red">#8C2A22</color>
+    <color name="ember_orange">#D9752B</color>
+    <color name="flame_gold">#D9A441</color>
+
+    <!-- Magia -->
+    <color name="arcane_purple">#4B2E63</color>
+    <color name="arcane_purple_light">#6B4A8A</color>
+
+    <!-- Texto -->
+    <color name="ink_dark">#2B2118</color>
+    <color name="ink_light">#F1E2BE</color>
+
+    <!-- Estados -->
+    <color name="error_red">#B23A2E</color>
+</resources>
