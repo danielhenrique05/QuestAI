@@ -15,6 +15,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.Firebase
+import com.google.firebase.appcheck.appCheck
+import com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory
+import com.google.firebase.initialize
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,6 +41,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        Firebase.initialize(this)
+        Firebase.appCheck.installAppCheckProviderFactory(
+            DebugAppCheckProviderFactory.getInstance()
+        )
 
         setContentView(R.layout.activity_main)
 
@@ -88,9 +97,9 @@ class MainActivity : AppCompatActivity() {
                 val dificuldade = spDificuldade.selectedItem.toString()
 
                 val intent = Intent(this, ResultadoActivity::class.java)
-                intent.putExtra("Modo","aleatorio")
-                intent.putExtra("Ambientacao", ambientacao)
-                intent.putExtra("Dificuldade",dificuldade)
+                intent.putExtra("modo","aleatorio")
+                intent.putExtra("ambientacao", ambientacao)
+                intent.putExtra("dificuldade",dificuldade)
                 startActivity(intent)
 
             }else{
@@ -106,9 +115,9 @@ class MainActivity : AppCompatActivity() {
                 tvErro.visibility = View.GONE
 
                 val intent = Intent(this, ResultadoActivity::class.java)
-                intent.putExtra("Modo", "Personalizado")
-                intent.putExtra("Contexto", contexto)
-                intent.putExtra("Elementos", elementos)
+                intent.putExtra("modo", "personalizado")
+                intent.putExtra("contexto", contexto)
+                intent.putExtra("elementos", elementos)
                 startActivity(intent)
 
 

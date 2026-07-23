@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.questai" />
+                  <option name="mobileSdkAppId" value="1:929812597358:android:ee3f46d57e864985c2f47f" />
+                  <option name="projectId" value="questai-rpg" />
+                  <option name="projectNumber" value="929812597358" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

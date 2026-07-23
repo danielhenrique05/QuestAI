@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "929812597358",
+    "project_id": "questai-rpg",
+    "storage_bucket": "questai-rpg.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929812597358:android:ee3f46d57e864985c2f47f",
+        "android_client_info": {
+          "package_name": "com.example.questai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAanH7zm4SJwEHydVaXEb_kyotOxUfXur8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
