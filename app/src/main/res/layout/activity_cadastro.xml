@@ -1,6 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dungeon"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- ===== CABEÇALHO ===== -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:text="📜"
+            android:textSize="36sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:text="CRIAR CONTA"
+            android:textColor="@color/flame_gold"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:fontFamily="serif" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="20dp"
+            android:text="junte-se à aventura"
+            android:textColor="@color/parchment_edge"
+            android:textSize="13sp"
+            android:fontFamily="serif"
+            android:textStyle="italic" />
+
+        <!-- ===== CARD: TIPO DE CONTA ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_scroll"
+            android:padding="18dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎭 VOCÊ É..."
+                android:textColor="@color/ink_dark"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:fontFamily="serif"
+                android:layout_marginBottom="10dp" />
+
+            <RadioGroup
+                android:id="@+id/rgTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbJogador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🗡️  Jogador — vou explorar a aventura"
+                    android:textColor="@color/ink_dark"
+                    android:textSize="14sp"
+                    android:checked="true"
+                    android:buttonTint="@color/ember_red"
+                    android:paddingVertical="6dp" />
+
+                <RadioButton
+                    android:id="@+id/rbMestre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔮  Mestre — vou conduzir a campanha"
+                    android:textColor="@color/ink_dark"
+                    android:textSize="14sp"
+                    android:buttonTint="@color/arcane_purple"
+                    android:paddingVertical="6dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- ===== CARD: DADOS ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_scroll"
+            android:padding="18dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✒️ SEUS DADOS"
+                android:textColor="@color/ink_dark"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:fontFamily="serif"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:textColor="@color/ink_dark"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etNome"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="textPersonName|textCapWords"
+                android:background="@drawable/edittext_scroll"
+                android:hint="ex: Ana Silva"
+                android:textColorHint="#9C8A66"
+                android:textColor="@color/ink_dark"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:textColor="@color/ink_dark"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edittext_scroll"
+                android:hint="seu@email.com"
+                android:textColorHint="#9C8A66"
+                android:textColor="@color/ink_dark"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Senha (mín. 6 caracteres)"
+                android:textColor="@color/ink_dark"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etSenha"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="textPassword"
+                android:background="@drawable/edittext_scroll"
+                android:hint="••••••••"
+                android:textColorHint="#9C8A66"
+                android:textColor="@color/ink_dark"
+                android:paddingHorizontal="12dp" />
+        </LinearLayout>
+
+        <!-- ===== BOTÃO DE AÇÃO ===== -->
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/button_arcane"
+            android:text="📜  CRIAR CONTA"
+            android:textColor="@color/parchment"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:fontFamily="serif"
+            android:elevation="4dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarCadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvErroCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/error_red"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvIrParaLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Já tem conta? Entrar"
+            android:textColor="@color/arcane_purple_light"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>
