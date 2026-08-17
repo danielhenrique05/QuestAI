@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dungeon"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="🗡️"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:text="ENTRAR NA SALA"
+            android:textColor="@color/flame_gold"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:fontFamily="serif" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="24dp"
+            android:text="digite o código que o mestre te enviou"
+            android:textColor="@color/parchment_edge"
+            android:textSize="13sp"
+            android:fontFamily="serif"
+            android:textStyle="italic" />
+
+        <!-- ===== CARD: CÓDIGO ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_scroll"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔑 CÓDIGO DA SALA"
+                android:textColor="@color/ink_dark"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:fontFamily="serif"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/etCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/edittext_scroll"
+                android:hint="EX: A1B2C3"
+                android:textColorHint="#9C8A66"
+                android:textColor="@color/ink_dark"
+                android:paddingHorizontal="12dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:letterSpacing="0.15"
+                android:textStyle="bold"
+                android:inputType="textCapCharacters"
+                android:maxLength="6" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnEntrarSala"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/button_ember"
+            android:text="⚔  ENTRAR"
+            android:textColor="@color/parchment"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:fontFamily="serif"
+            android:elevation="4dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarEntrarSala"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvErroEntrarSala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/error_red"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>
